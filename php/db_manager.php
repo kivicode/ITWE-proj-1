@@ -6,20 +6,20 @@ class DBManager {
     private $add_query_head = "INSERT INTO grades (id, `First name`, `Last name`, `Midterm 1`, `Midterm 2`, `Course final`) VALUES (";
 
     function __construct() {
-        $this->$conn = mysqli_connect('127.0.0.1', 'kivicode', 'lululu23', 'kivicode_db');
+        $this->conn = mysqli_connect('localhost', 'kivicode', 'lululu23', 'kivicode');
     }
 
     function __destruct() {
-        mysqli_close($this->$conn);
+        mysqli_close($this->conn);
     }
 
     function fetch() {
-        return mysqli_query($this->$conn, 'SELECT * FROM grades');
+        return mysqli_query($this->conn, 'SELECT * FROM grades');
     }
 
     function add($id, $fname, $sname, $m1, $m2, $grade) {
         $query = $this->add_query_head . "$id, '$fname', '$sname', $m1, $m2, $grade);";
-        $res = mysqli_query($this->$conn, $query);
+        $res = mysqli_query($this->conn, $query);
         if ($res) {} else {
             echo "<div class='alert alert-danger' role='alert'>Unable to add a row: " . mysqli_error($this->$conn) . "</div>";
             return;
@@ -28,7 +28,7 @@ class DBManager {
     }
 
     function delete($id) {
-        $res = mysqli_query($this->$conn, "DELETE FROM grades WHERE id={$id}");
+        $res = mysqli_query($this->conn, "DELETE FROM grades WHERE id={$id}");
         if ($res) {} else {
             echo "<div class='alert alert-danger' role='alert'>Failed to delete a row: " . mysqli_error($this->$conn) . "</div>";
             return;

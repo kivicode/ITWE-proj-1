@@ -19,7 +19,7 @@
     <script src="https://cdn.datatables.net/v/dt/dt-1.11.4/datatables.min.js"></script>
 
     <script src="js/main.js"></script>
-    <title>Title</title>
+    <title>Kirilenko Proj-2</title>
 </head>
 
 <?php
