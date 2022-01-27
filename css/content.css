@@ -1,0 +1,58 @@
+.main-content {
+    position: fixed;
+    top: 5rem;
+    left:9.2rem;
+    width: calc(100% - 9.2rem);
+    height: calc(100% - 5rem);
+    padding: 1.5rem;
+    background-color: #F2F2F2;
+    overflow-y: auto;
+    overflow-x: hidden;
+    color: #333;
+    font-size: 1.25rem;
+}
+
+.db-error {
+    color: #F00;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.table td.fit,
+.table th.fit {
+    white-space: nowrap;
+    width: 1%;
+}
+
+.db-add-form {
+    width:40%;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+}
+
+.db-add-form > h4 {
+    margin-bottom: 2rem;
+    width: 100%;
+    text-align: center;
+}
+
+.form-left {
+    float: left;
+    border-right: thin solid #bbb;
+}
+
+.form-right {
+    float: right;
+    margin-right: 20%;
+    padding-left: 2rem;
+    width: 40%;
+}
+
+#forms-wrapper {
+    display: flex;
+}
+
+.list-group-item.active {
+    background-color: #04AA6D;
+    border-color: #04AA6D;
+}

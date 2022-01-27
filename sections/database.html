@@ -1,0 +1,53 @@
+<div id="forms-wrapper">
+<form class="db-add-form form-left" method="POST">
+    <h4><u>Create</u> a new entry</h4>
+    <input type="hidden" name="action" value="add">
+    <div class="row mb-3">
+        <label for="id" class="col-sm-3 col-form-label">Student's ID</label>
+        <div class="col-sm-7">
+            <input type="number" class="form-control" id="id" name="id" value="%d" placeholder="Student's ID number" required>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="fname" class="col-sm-3 col-form-label">First name</label>
+        <div class="col-sm-7">
+            <input type="text" class="form-control" id="fname" name="fname" value="%s" placeholder="Student's first (given) name" required>
+        </div>
+
+        <label for="sname" class="col-sm-3 col-form-label">Last name</label>
+        <div class="col-sm-7">
+            <input type="text" class="form-control" id="sname" name="sname" value="%s" placeholder="Student's last (family) number" required>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="mid1" class="col-sm-3 col-form-label">Midterm 1</label>
+        <div class="col-sm-7">
+            <input type="number" class="form-control" id="mid1" name="mid1" value="%d" placeholder="Mark for the 1st midterm test" required>
+        </div>
+
+        <label for="mid2" class="col-sm-3 col-form-label">Midterm 2</label>
+        <div class="col-sm-7">
+            <input type="number" class="form-control" id="mid2" name="mid2" value="%d" placeholder="Mark for the 2nd midterm test" required>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="final" class="col-sm-3 col-form-label">Course grade</label>
+        <div class="col-sm-7">
+            <input type="number" class="form-control" id="final" name="final" value="%d" placeholder="Final grade for the course" required>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Create new entry</button>
+</form>
+
+<form class="db-add-form form-right" method="POST">
+    <h4><u>Delete</u> an entry</h4>
+    <input type="hidden" name="action" value="delete">
+    <div class="row mb-3">
+        <label for="del-id" class="col-sm-3 col-form-label">Student's ID</label>
+        <div class="col-sm-7">
+            <input type="number" class="form-control" id="del-id" name="id" placeholder="Student's ID number to delete" required>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-danger">Delete the entry</button>
+</form>
+</div>
