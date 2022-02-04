@@ -30,6 +30,7 @@ if (isset($_GET['tab'])) {
     $tab = $_GET['tab'];
 }
 $tab_content = file_get_contents("sections/".$tab.".html");
+$msg_font_style = date('N') <= 5 ? 'nav-workday' : '';
 
 $id    = isset($_POST['id'])    ? $_POST['id']    : 404592;
 $fname = isset($_POST['fname']) ? $_POST['fname'] : '';
@@ -45,7 +46,7 @@ $final = isset($_POST['final']) ? $_POST['final'] : 5;
         <a class="navbar-brand"><b>KiviCode</b>'s awesome web-site</a>
         <span class="navbar-brand">
             Today:
-            <span class="<?php if(date('N') <= 5) echo('nav-workday') ?>">
+            <span class="<?php echo($msg_font_style) ?>">
                 <?php echo date('d l, M Y'); ?>
             </span>
         </span>
@@ -107,9 +108,9 @@ if($tab == "database") {
 </div>
 
 <footer class="bg-light text-lg-start">
-  <div class="p-3 footer-text text-center">
+  <div class="p-3 footer-text text-center <?php echo($msg_font_style) ?>">
         <?php
-        if (date('H') >= 18) {
+        if (date('H') >= 18 || true) {
             $file = file("phrases.txt");
             echo "Phrase of the day:<i>";
             echo $file[rand(0, count($file) - 1)];
