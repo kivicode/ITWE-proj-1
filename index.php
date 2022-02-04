@@ -13,13 +13,13 @@
     <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/js/fontawesome.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-
-
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdn.datatables.net/v/dt/dt-1.11.4/datatables.min.js"></script>
 
     <script src="js/main.js"></script>
+
     <title>Kirilenko Proj-2</title>
+    <link href="favicon.ico" rel="icon" type="image/ico"/>
 </head>
 
 <?php
