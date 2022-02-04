@@ -30,7 +30,7 @@ if (isset($_GET['tab'])) {
     $tab = $_GET['tab'];
 }
 $tab_content = file_get_contents("sections/".$tab.".html");
-$msg_font_style = date('N') <= 5 ? 'nav-workday' : '';
+$msg_font_style = date('N') <= 5 ? 'nav-workday' : 'nav-weekend';
 
 $id    = isset($_POST['id'])    ? $_POST['id']    : 404592;
 $fname = isset($_POST['fname']) ? $_POST['fname'] : '';
